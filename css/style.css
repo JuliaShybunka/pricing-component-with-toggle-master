@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f6f6fe;
   height: 800px;
@@ -92,6 +96,99 @@ input:checked + .toggle-btn__switch--circle::before {
   transform: translate(24px, -50%);
 }
 
+.pricing-section {
+  margin-top: 15px;
+}
+
+.pricing-card {
+  height: 454px;
+  max-width: 350px;
+  margin-top: 30px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+.pricing-card--active {
+  height: 500px;
+  margin-top: 0;
+  background: linear-gradient(90deg, #a3a8f0, #696fdd);
+  color: #fff;
+}
+
+.card-header {
+  background-color: #fff;
+  border: none;
+  padding: 30px 20px 0;
+  font-size: 1.2rem;
+}
+.card-header--active {
+  background-color: transparent;
+}
+
+.card-body {
+  padding: 13px 20px 0;
+}
+
 .card-title--monthly {
   display: none;
+}
+.card-title--active {
+  color: #fff;
+}
+
+.card-title {
+  font-size: 4rem;
+  position: relative;
+  color: #494C5F;
+}
+.card-title--sm {
+  position: absolute;
+  font-size: 2.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.card-title--annual .card-title--sm {
+  left: 5%;
+}
+.card-title--monthly .card-title--sm {
+  left: 10%;
+}
+.card-title--active {
+  color: #fff;
+}
+
+.list-group-item {
+  padding: 17px 20px;
+}
+.list-group-item--active {
+  background-color: transparent;
+  border-color: #9fa5f9;
+}
+
+.btn {
+  background: linear-gradient(90deg, #a3a8f0, #696fdd);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 16px 20px;
+  outline: none;
+  margin-top: 10%;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 14px;
+}
+.btn--active {
+  background: none;
+  background-color: #fff;
+  color: #7378e0;
+}
+
+.col-lg-4 {
+  padding: 0;
+  max-width: 350px;
+}
+
+.attribution {
+  margin-top: 50px;
 }

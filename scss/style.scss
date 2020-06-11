@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #f6f6fe;
     height: 800px;
@@ -95,34 +99,102 @@ background: radial-gradient(circle, rgba(105,111,221,1) 0%, rgba(33,44,202,1) 96
     }
 }
 
-.slider {}
+// Card
+.pricing-section {
+    margin-top: 15px;
+}
 
-.round {}
+.pricing-card {
+    height: 454px;
+    max-width: 350px;
+    margin-top: 30px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    &--active {
+        height: 500px;
+        margin-top: 0;
+        background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+        color: #fff;
+    }
+}
 
-.pricing-card {}
+.card-header {
+    background-color: #fff;
+    border: none;
+    padding: 30px 20px 0;
+    font-size: 1.2rem;
+    &--active {
+        background-color: transparent;
+    }
+}
 
-.card {}
-
-.card-header {}
-
-.card-body {}
+.card-body {
+    padding: 13px 20px 0;
+}
 
 .card-title {
     &--monthly {
         display: none;
     }
+    &--active {
+        color: #fff;
+    }
 }
 
-.list-group {}
+.card-title {
+    font-size: 4rem;
+    position: relative;
+    color: #494C5F;
+    &--sm {
+        position: absolute;
+        font-size: 2.2rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &--annual .card-title--sm {
+        left: 5%;
+    }
+    &--monthly .card-title--sm {
+        left: 10%;
+    }
+    &--active {
+        color: #fff;
+    }
+}
 
-.list-group-flush {}
+.list-group-item {
+    padding: 17px 20px;
+    &--active {
+        background-color: transparent;
+        border-color: #9fa5f9;
+    }
+}
 
-.list-group-item {}
+.btn {
+    background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    outline: none;
+    margin-top: 10%;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 14px;
+    &--active {
+        background: none;
+        background-color: #fff;
+        color: #7378e0;
+    }
+}
 
-.btn {}
+.col-lg-4 {
+    padding: 0;
+    max-width: 350px;
+}
 
-.btn-block {}
-
-.btn-danger {}
-
-.card-link {}
+.attribution {
+    margin-top: 50px;
+}
