@@ -21,7 +21,6 @@ body {
 background: radial-gradient(circle, rgba(105,111,221,1) 0%, rgba(33,44,202,1) 96%);*/
 .pricing {
   position: relative;
-  height: 100%;
   padding: 5.2% 0 7%;
 }
 .pricing-title {
@@ -37,6 +36,7 @@ background: radial-gradient(circle, rgba(105,111,221,1) 0%, rgba(33,44,202,1) 96
   right: 0;
   width: 368px;
   height: 660px;
+  z-index: -1;
 }
 .pricing::after {
   content: "";
@@ -95,9 +95,17 @@ background: radial-gradient(circle, rgba(105,111,221,1) 0%, rgba(33,44,202,1) 96
 input:checked + .toggle-btn__switch--circle::before {
   transform: translate(24px, -50%);
 }
+.toggle-btn__switch input:checked + .toggle-btn__switch--circle {
+  background: #c5c8f5;
+}
 
 .pricing-section {
   margin-top: 15px;
+}
+
+.row {
+  justify-content: space-around;
+  margin: 0;
 }
 
 .pricing-card {
@@ -177,11 +185,29 @@ input:checked + .toggle-btn__switch--circle::before {
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 14px;
+  transition: 1s;
+  outline: none;
+}
+.btn:hover {
+  background: transparent;
+  border: 1px solid #777aaf;
+  color: #7277d2;
 }
 .btn--active {
   background: none;
   background-color: #fff;
   color: #7378e0;
+  margin-top: 19%;
+}
+.btn--active:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
 }
 
 .col-lg-4 {
@@ -190,5 +216,18 @@ input:checked + .toggle-btn__switch--circle::before {
 }
 
 .attribution {
-  margin-top: 50px;
+  margin-top: 10%;
+}
+.attribution a {
+  color: #7277d2;
+}
+
+@media (max-width: 320px) {
+  .pricing::after {
+    display: none;
+  }
+
+  .card-title {
+    font-size: 3rem;
+  }
 }

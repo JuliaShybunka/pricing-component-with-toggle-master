@@ -1,0 +1,8 @@
+@media (max-width: 320px) {
+    .pricing::after {
+        display: none;
+    }
+    .card-title {
+        font-size: 3rem;
+    }
+}
