@@ -222,7 +222,7 @@ input:checked + .toggle-btn__switch--circle::before {
   color: #7277d2;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 729px) {
   .pricing::after {
     display: none;
   }
